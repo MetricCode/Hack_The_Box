@@ -60,5 +60,6 @@ Well, we can echo a reverse shell line to this file, log out then try ssh again 
 ![Screenshot_2022-11-11_10_46_48](https://user-images.githubusercontent.com/99975622/201916876-4814df8f-fd52-4a65-85d5-2181d1353584.png)
 
 And we got root. 
-
+:)
+My socials: @ twitter: twitter.com/M3tr1c_root @ instagram: instagram.com/m3tr1c_r00t/
 
