@@ -61,5 +61,7 @@ Well, we can echo a reverse shell line to this file, log out then try ssh again 
 
 And we got root. 
 :)
-My socials: @ twitter: twitter.com/M3tr1c_root @ instagram: instagram.com/m3tr1c_r00t/
+My socials: 
+           @twitter: https://twitter.com/M3tr1c_root 
+           @instagram: https://instagram.com/m3tr1c_r00t/
 
