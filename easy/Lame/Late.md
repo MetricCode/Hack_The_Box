@@ -36,8 +36,7 @@ On some googling, we find that we can use rce to reads the contents of the serve
  
  so i typed this command and took a screenshot, cropped the image and uploaded it to the site to be analyzed and in the output file, we can see the users via the **/etc/passwd** file contents.
  
-![etc passwd](https://user-images.githubusercontent.com/99975622/201913678-0366373f-954a-43e7-9106-a8843a6![Screenshot_2022-11-11_10_36_57](https://user-images.githubusercontent.com/99975622/201913767-3e2e2554-4591-415b-8e7e-dcdaa01a08d4.png)
-04bcc.png)
+ ![Screenshot_2022-11-11_10_37_24](https://user-images.githubusercontent.com/99975622/201915427-bd8688ad-4de2-4cfb-b00d-4927b0f7e4a0.png)
 
 Now that we can see te users, lets try and look for the .ssh/id_rsa file for the svc_acc account. 
 
@@ -47,4 +46,19 @@ and here are the contents of the output...
 I then renamed the file and tried to ssh directly into the svc_acc account and **voila!**
 And we can view the contents of the user.txt flag.
 ![Screenshot_2022-11-11_10_38_21](https://user-images.githubusercontent.com/99975622/201914674-764f763f-f7e9-44ad-8e2c-b3c12da439d1.png)
+
+So i tried poking around looking for other files, crontab and sudo -l priviledges but no luck.
+So i went into my arsenal and pulled out the linpeas script and ran it against the system using a python http server and curl command and ...
+![Screenshot_2022-11-11_10_39_24](https://user-images.githubusercontent.com/99975622/201916018-3242903b-d540-4072-a699-24dad02f7b61.png)
+i found the that there was a file in the system that...
+![Screenshot_2022-11-11_10_40_25](https://user-images.githubusercontent.com/99975622/201916217-3cfdb1a9-76d3-49f2-9f0c-8651fb5e15b7.png)
+upon login of any ssh, executes as root and notices the root/admin user.
+![Screenshot_2022-11-11_10_41_35](https://user-images.githubusercontent.com/99975622/201916253-00aac5f8-da1d-453e-90ea-780a4626092d.png)
+
+Well, we can echo a reverse shell line to this file, log out then try ssh again using the svc_acc account and using a netcat listener gain root access...
+
+![Screenshot_2022-11-11_10_46_48](https://user-images.githubusercontent.com/99975622/201916876-4814df8f-fd52-4a65-85d5-2181d1353584.png)
+
+And we got root. 
+
 
