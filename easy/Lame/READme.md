@@ -43,8 +43,9 @@ cd into /root and cat root.txt to get the root flag.
 ![Screenshot_2022-11-09_21_06_24](https://user-images.githubusercontent.com/99975622/201052338-e6b2a061-23b0-467d-816b-29361b7ad6f9.png)
 
 And done!
+
 My socials:
-          @ twitter: twitter.com/M3tr1c_root
-          @ instagram: instagram.com/m3tr1c_r00t/
+          <br>@ twitter: twitter.com/M3tr1c_root
+          <br>@ instagram: instagram.com/m3tr1c_r00t/
 
 
