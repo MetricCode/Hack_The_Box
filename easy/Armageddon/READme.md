@@ -15,4 +15,4 @@ gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://IP -o gobusterlig
 
 on Visiting the sight, we can see that its a drupal site...
 
-![Screenshot_2022-11-19_18_49_42](https://user-images.githubusercontent.chttps://github.com/MetricCode/Hack_The_Box/tree/main/easy/Armageddonom/99975622/202859434-c027d979-74ff-445d-bf5c-ca1e95ba01fa.png)
+![Screenshot_2022-11-19_18_49_42](https://user-images.githubusercontent.com/99975622/202859434-c027d979-74ff-445d-bf5c-ca1e95ba01fa.png)
