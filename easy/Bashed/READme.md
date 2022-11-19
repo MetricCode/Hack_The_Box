@@ -31,4 +31,8 @@ You can find this code from pentestmonkey's cheetsheet.
 ![Screenshot_2022-11-16_20_30_29](https://user-images.githubusercontent.com/99975622/202863295-c4e83c3a-d45e-4d25-a910-7908d0b0db5a.png)
 We open a listener and we get a reverse shell as root!
 
+Get your root flag and done!
 
+### Socials
+@instagram:https://instagram.com/Metric_r00t
+<br> Twitter:https://twitter.com/M3tr1c_root
