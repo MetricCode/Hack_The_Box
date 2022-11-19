@@ -23,11 +23,12 @@ In it there are two files.
 
 ![Screenshot_2022-11-16_20_27_49](https://user-images.githubusercontent.com/99975622/202862861-494c426e-6b98-4e95-9f46-83c2cb3f9d0a.png)
 On checking out the two files, it seems like the test.py is being executed in a cron cycle....
-![Screenshot_2022-11-16_20_27_55](https://user-images.githubusercontent.com/99975622/202862962-4ad54918-7bad-480e-b974-407c570252ab.png)![Screenshot_2022-11-16_20_29_36](https://user-images.githubusercontent.com/99975622/202863235-dff171b4-886d-4a31-af62-eb69e51bb403.png)
-
+![Screenshot_2022-11-16_20_27_55](https://user-images.githubusercontent.com/99975622/202862962-4ad54918-7bad-480e-b974-407c570252ab.png)
 We can replace the file with a python reverse shell coz the script is being run by the root user.
+![Screenshot_2022-11-16_20_29_36](https://user-images.githubusercontent.com/99975622/202863235-dff171b4-886d-4a31-af62-eb69e51bb403.png)
+You can find this code from pentestmonkey's cheetsheet.
 
-
-
+![Screenshot_2022-11-16_20_30_29](https://user-images.githubusercontent.com/99975622/202863295-c4e83c3a-d45e-4d25-a910-7908d0b0db5a.png)
+We open a listener and we get a reverse shell as root!
 
 
