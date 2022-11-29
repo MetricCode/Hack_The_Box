@@ -11,5 +11,5 @@
  Feel free to checkout my writeups on boxes and challenges!
  You can also visit the other repos while you're at it! 
 ## My socials:
-<br>@ twitter: twitter.com/M3tr1c_root
-<br>@ instagram: instagram.com/m3tr1c_r00t/
+<br>@ twitter: https://twitter.com/M3tr1c_root
+<br>@ instagram: https://instagram.com/m3tr1c_r00t/
