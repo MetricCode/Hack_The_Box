@@ -39,6 +39,6 @@ And we are root!
 Get your root flag and done!
 ![Screenshot_2022-11-20_22_12_17](https://user-images.githubusercontent.com/99975622/205175694-aabcdefc-cba0-4396-902d-1bfd1dbe7863.png)
 
-
-
-
+### Socials
+@Instagram:https://instagram.com/M3tr1c_r00t
+<br>@Twitter:https://twitter.com/M3tr1c_root
