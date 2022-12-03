@@ -15,6 +15,8 @@ Return empty
 
 
 SSTI
+![image](https://user-images.githubusercontent.com/99975622/205456530-7d222419-936b-4b8c-af3b-5051c5ec7a92.png)
+
 ![Screenshot_2022-11-20_15_40_23](https://user-images.githubusercontent.com/99975622/205445039-26d98841-5551-4ea9-9a22-6e75a0db605f.png)
 
 Getting reverse shell,
