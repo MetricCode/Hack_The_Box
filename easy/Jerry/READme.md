@@ -23,5 +23,10 @@ After making our paload, we can now upload it via the manager site.
 ![Screenshot_2022-11-10_14_10_37](https://user-images.githubusercontent.com/99975622/205442918-9bc50632-b8dc-42d5-972c-208023d39876.png)
 Next up, lets set up our listener and we can visit our payload via the upload directory and boom!, we got our reverse shell.
 ![Screenshot_2022-11-10_14_12_50](https://user-images.githubusercontent.com/99975622/205442965-3526e9cd-0ddd-4e3f-b29b-edc28145ae7f.png)
+Hop on over to the Administrator's desktop and grab your flags!
 ![Screenshot_2022-11-10_14_16_00](https://user-images.githubusercontent.com/99975622/205443036-51584892-f780-4434-8180-a88743760032.png)
 
+
+### Socials
+@Instagram:https://instagram.com/M3tr1c_r00t
+<br>@Twitter:https://twitter.com/M3tr1c_root
