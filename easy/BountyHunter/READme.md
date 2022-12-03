@@ -13,7 +13,7 @@ After running a gobuster scan,we find a couple of directories which we could che
 
 ### XXE Vulnerability
 ![image](https://user-images.githubusercontent.com/99975622/204363407-cb28d4a3-abf8-4cb9-be8f-9c392b877e56.png)
-After checking out the site, we find there's a submit page which sent data in form of a base64 encoded xml format.
+<br>After checking out the site, we find there's a submit page which sent data in form of a base64 encoded xml format.
 After finding out about thid while using burpsuite, we can try using the basic xxe and we achieved Arbibrary file read....
 On this same account, i made a python script which allows for file read and only outputs the file read contents....
 
