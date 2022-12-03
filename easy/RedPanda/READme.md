@@ -17,7 +17,9 @@ After a bit of interaction with the site, i finally got a hold on how to gain ac
 Plus, if you would have checked your wappalyzer extension, you would have noticed the system was running on a java kind of framework...
 
 ### SSTI
+Finally got a foothold to work upon....
 ![image](https://user-images.githubusercontent.com/99975622/205456530-7d222419-936b-4b8c-af3b-5051c5ec7a92.png)
+On trying to see id there's a SSTI vulnerability, if realized we could get a response while using the "*" special character...
 
 ![Screenshot_2022-11-20_15_40_23](https://user-images.githubusercontent.com/99975622/205445039-26d98841-5551-4ea9-9a22-6e75a0db605f.png)
 
