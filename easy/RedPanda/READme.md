@@ -67,4 +67,14 @@ and boom!
 ![Screenshot_2022-11-20_16_09_37](https://user-images.githubusercontent.com/99975622/205457719-dd406a39-31dc-492b-8e22-9f4f7cce0718.png)
 Linpeas didn't really give us any useful information so i moved on to pspy64 to check if there are any activities running in the background....
 
+**Running pspsy64...**
+on looking at some output by pspy64, we can see there's a command running as root on a certain jar file...
+![Screenshot_2022-11-20_16_16_56](https://user-images.githubusercontent.com/99975622/205457844-617cb601-5b83-444b-9b0e-7a8e14cdff73.png)
+
+Next step, we grab that jar file and have a look at it....
+
+#### Reverse Engineering the jar file so as to have an idea of what's happening
+
+![Screenshot_2022-11-20_16_18_10](https://user-images.githubusercontent.com/99975622/205457896-dea997a6-ba1c-41df-9056-a2f524b68740.png)
+
 
