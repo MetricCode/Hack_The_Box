@@ -80,7 +80,8 @@ On doing so, we get an error. But if we get rid of the _**order=asc**_, it works
 ![Screenshot_2022-11-22_23_54_04](https://user-images.githubusercontent.com/99975622/207166297-79ebc158-fb92-4105-8a31-367676f6d678.png)
 
 Looking at the dumped drafts, we can see there's an Employee chat system...
-<br> We can visit the url and register...
+![Screenshot_2022-11-22_23_54_18](https://user-images.githubusercontent.com/99975622/207166937-d747360d-338b-4833-8c59-acadcb0f460b.png)
+We can visit the url and register...
 
 ![Screenshot_2022-11-22_23_55_46](https://user-images.githubusercontent.com/99975622/207166624-34188a3b-e19f-4d5b-aef0-5b31152fa758.png)
 
