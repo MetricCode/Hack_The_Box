@@ -112,9 +112,21 @@ reclops file ../../../../../proc/self/environ.env
 ![Screenshot_2022-11-23_00_07_35](https://user-images.githubusercontent.com/99975622/207169293-cb02a5c6-5861-41ea-9996-d1f60dd6e64e.png)
 
 ### Priv Esc...
+![Screenshot_2022-11-23_00_11_16](https://user-images.githubusercontent.com/99975622/207170451-8e1ae662-4977-45cc-8cdf-05837c45c07f.png)
+
 On running Linpeas, we realise that the system is vulnerable to _**"CVE-2021-3560"**_ (Polkit-Privilege-Esclation PoC)
 ```
 https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation
 ```
-Clone the script then 
-upload it to the box...
+Clone the script then upload it to the box...
+<br>On running the script, it creates a new user secnigma:secnigmaftw (Check source code for the creds...) that can run any command as root...
+![Screenshot_2022-11-23_00_27_05](https://user-images.githubusercontent.com/99975622/207170797-b1e22b18-0527-467c-93cc-a589cb5f2663.png)
+Move to the user using su.
+<br> Next you can run sudo bash and we're root!
+![Screenshot_2022-11-23_00_27_27](https://user-images.githubusercontent.com/99975622/207170964-8a37950f-533c-4866-9c03-b160167d72c8.png)
+Get your root flag and boom!
+<br>Done!
+
+### Socials
+@Instagram : https://instagram.com/M3tr1c_r00t
+<br>@Twitter : https://twitter.com/M3tr1c_root
