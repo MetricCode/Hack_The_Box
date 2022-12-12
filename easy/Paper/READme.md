@@ -60,11 +60,11 @@ On visiting the ip on port 80, we are redirected to host;
 **_Gobuster/Directory Brute...._**
 <br>Next up, i ran a gobusterscan using common.txt wordlists and found a directory "/manual" which reveals to us this is a wordpress site...
 ```
-/.hta                [33m (Status: 403)[0m [Size: 199]
-/.htaccess           [33m (Status: 403)[0m [Size: 199]
-/.htpasswd           [33m (Status: 403)[0m [Size: 199]
-/cgi-bin/            [33m (Status: 403)[0m [Size: 199]
-/manual              [36m (Status: 301)[0m [Size: 236][34m [--> http://10.129.136.31/manual/][0m
+/.hta                [33m (Status: 403) [0m [Size: 199]
+/.htaccess           [33m (Status: 403) [0m [Size: 199]
+/.htpasswd           [33m (Status: 403) [0m [Size: 199]
+/cgi-bin/            [33m (Status: 403) [0m [Size: 199]
+/manual              [36m (Status: 301) [0m [Size: 236] [34m [--> http://10.129.136.31/manual/] [0m
 ```
 On that note, I did a wordpress scan using wpscan and we find the version...
 ![Screenshot_2022-11-22_23_47_42](https://user-images.githubusercontent.com/99975622/207165581-762e5db0-8e57-4113-90a2-53f6447f51f4.png)
@@ -84,6 +84,37 @@ Looking at the dumped drafts, we can see there's an Employee chat system...
 We can visit the url and register...
 
 ![Screenshot_2022-11-22_23_55_46](https://user-images.githubusercontent.com/99975622/207166624-34188a3b-e19f-4d5b-aef0-5b31152fa758.png)
+We're in....
+![Screenshot_2022-11-22_23_57_30](https://user-images.githubusercontent.com/99975622/207167348-32c66759-2566-4f1d-9d29-cc675a13ca7f.png)
 
+After going through the employee's chats, we note that there's a bot in the system set by the admin to run bash commands on the server to get and read files...
+![Screenshot_2022-11-22_23_57_49](https://user-images.githubusercontent.com/99975622/207167510-3bb38186-365d-4c9c-a59b-40ccc4a0a5c6.png)
+ 
 
+```
+reclops file ../../../../../etc/passwd
+```
+we can run the code below to check on the system's environment...
+```
+reclops file ../../../../../proc/self/environ
+```
+And we get some creds...
+![Screenshot_2022-11-23_00_07_14](https://user-images.githubusercontent.com/99975622/207168981-d6d69328-30d2-43e9-9877-df6c3faaa4d1.png)
 
+<br> We can try to ssh as dwight and it works...
+<br> You can get the user flag...
+![Screenshot_2022-11-23_00_08_53](https://user-images.githubusercontent.com/99975622/207169064-b3e3d656-85be-4238-9a95-a67c76d92d60.png)
+
+We can also run the script as below adding the environment in the environ directory...
+```
+reclops file ../../../../../proc/self/environ.env
+```
+![Screenshot_2022-11-23_00_07_35](https://user-images.githubusercontent.com/99975622/207169293-cb02a5c6-5861-41ea-9996-d1f60dd6e64e.png)
+
+### Priv Esc...
+On running Linpeas, we realise that the system is vulnerable to _**"CVE-2021-3560"**_ (Polkit-Privilege-Esclation PoC)
+```
+https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation
+```
+Clone the script then 
+upload it to the box...
