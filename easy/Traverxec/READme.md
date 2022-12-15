@@ -70,4 +70,4 @@ We can run the sudo binary directly and boom! We are root!
 ![](https://i.imgur.com/BruFKHD.jpg)
 ### Socials
 @Instagram:https://instagram.com/M3tr1c_r00t
-@Twitter:https://twitter.com/M3tr1c_root
+<br>@Twitter:https://twitter.com/M3tr1c_root
