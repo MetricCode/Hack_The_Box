@@ -1,7 +1,7 @@
 # Academy!
 ## @Author : M3tr1c_r00t
 ![Academy](https://user-images.githubusercontent.com/99975622/209184686-64969825-87ac-43c2-a1b5-38ac5587f509.png)
-
+Academy is an easy box which we exploit by using an exposed token from a laravel php server and abusing the adm linux user priviledges to be able to pave our way into root!
 ### Enumeration ...
 _**Nmap...**_
 ```
