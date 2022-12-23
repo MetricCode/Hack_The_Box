@@ -35,6 +35,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Fri Nov 11 10:55:48 2022 -- 1 IP address (1 host up) scanned in 123.86 seconds
 
 ```
+### Foothold and Entry...
 We can see there are 2 web servers up.. So let's visit the first on port 80...
 
 ![Screenshot_2022-11-11_13_29_58](https://user-images.githubusercontent.com/99975622/209348304-f54c035a-2392-436c-8fcf-b516c070e871.png)
@@ -100,7 +101,7 @@ And we have RCE entry point!
 With our RCE, we can send our reverse shell script base64 encoded as there were some issues, probably filtering...
 ![Screenshot_2022-11-11_14_20_08](https://user-images.githubusercontent.com/99975622/209352552-03ce62ed-989d-40f0-ade8-8cdf22e3c877.png)
 And now we can get our user flag...
-
+### Priv Esc
 ![Screenshot_2022-11-11_14_22_23](https://user-images.githubusercontent.com/99975622/209352629-0328b116-6d44-413f-b25e-e682de97aa70.png)
 
 Next, i fired up linpeas to find a way for priv esc and the system is vulnerable to polkit CVE-2021-4034
