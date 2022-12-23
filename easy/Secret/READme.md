@@ -68,5 +68,36 @@ Next up we can log in with our new creds to the api and we get a token which we 
 
 ![Screenshot_2022-11-11_13_36_24](https://user-images.githubusercontent.com/99975622/209349657-158d2dde-e0e3-4bdb-99a4-ea340fa2c003.png)
 
+After a bit of dead ends, i decided to take a look a the source code once again and i found in the private.js file, there's an admin user validation...
 
+![Screenshot_2022-11-11_13_37_32](https://user-images.githubusercontent.com/99975622/209350393-6fbe934f-e688-4d65-a551-120f476c5233.png)
+
+<br> The verification is being cross referenced from the auth-token that we were given and with that, we can try to deobfuscate the auth-token and see what it entails...
+<br>For this, we are going to use a site <a href="jwt.io">jwt.io</a>
+
+![Screenshot_2022-11-11_13_45_54](https://user-images.githubusercontent.com/99975622/209350401-f22e5f4d-ce44-47ca-88c1-b5307754a6ca.png)
+With this information at hand , i went back to the git repo and we find that the .env file was removed...
+
+![Screenshot_2022-11-11_13_47_04](https://user-images.githubusercontent.com/99975622/209350860-95b54190-abba-4300-acf4-3558d3f4562a.png)
+On showing this git, we find a private token...
+![Screenshot_2022-11-11_13_47_27](https://user-images.githubusercontent.com/99975622/209351009-bf4fd5a5-15c8-45bb-be21-eaf58e2e7833.png)
+You also need to remember that on the 
+file private.js, the auth-ticket was verifying the username to being "theadmin" So we  need to change our 
+email to gain access on the auth-token that we've found ...
+
+
+![Screenshot_2022-11-11_13_47_57](https://user-images.githubusercontent.com/99975622/209351825-75345d22-d622-4bab-891b-a43d7c0ea5af.png)
+After that, we can gain access to the priv directory using the auth-token...
+
+
+On further enumeration on the private.js file, there was a log directory which might be our entry point into the machine as it may be reading the log files directly from the server....
+
+
+![Screenshot_2022-11-11_14_17_20](https://user-images.githubusercontent.com/99975622/209352210-f1b32dde-27d2-488e-952b-97027250867a.png)
+
+And we have RCE entry point!
+<br> We can now get our reverse shell...
+With our RCE, we can send our reverse shell script base64 encoded as there were some issues, probably filtering...
+
+![Screenshot_2022-11-11_14_18_30](https://user-images.githubusercontent.com/99975622/209352406-0cda28ca-4231-415f-ab1d-06a49b5d19b8.png)
 
