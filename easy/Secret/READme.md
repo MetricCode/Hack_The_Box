@@ -98,6 +98,20 @@ On further enumeration on the private.js file, there was a log directory which m
 And we have RCE entry point!
 <br> We can now get our reverse shell...
 With our RCE, we can send our reverse shell script base64 encoded as there were some issues, probably filtering...
+![Screenshot_2022-11-11_14_20_08](https://user-images.githubusercontent.com/99975622/209352552-03ce62ed-989d-40f0-ade8-8cdf22e3c877.png)
+And now we can get our user flag...
 
-![Screenshot_2022-11-11_14_18_30](https://user-images.githubusercontent.com/99975622/209352406-0cda28ca-4231-415f-ab1d-06a49b5d19b8.png)
+![Screenshot_2022-11-11_14_22_23](https://user-images.githubusercontent.com/99975622/209352629-0328b116-6d44-413f-b25e-e682de97aa70.png)
 
+Next, i fired up linpeas to find a way for priv esc and the system is vulnerable to polkit CVE-2021-4034
+
+![Screenshot_2022-11-11_14_22_46](https://user-images.githubusercontent.com/99975622/209352817-dffc1594-6a92-445b-8b09-749dabdef51c.png)
+
+After that, i sent the python script to the machine and we got root!
+
+![Screenshot_2022-11-11_14_29_31](https://user-images.githubusercontent.com/99975622/209352911-2f1d3335-ae9e-4408-b665-8d4e6062ec0c.png)
+
+Done!
+### Socials
+@Instagram:https://instagram.com/M3tr1c_r00t
+<br>@Twitter:https://twitter.com/M3tr1c_root
