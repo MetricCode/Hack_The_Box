@@ -1,6 +1,6 @@
 # Ambassador!
 ## @Author : M3tr1c_r00t
-![](https://i.imgur.com/3kMerSg.png)
+![Ambassador](https://user-images.githubusercontent.com/99975622/215278047-550fb731-1ee7-4ef6-b7b1-5e8d098da08f.png)
 Ambassador is a medium ranked box which has a grafana content management system which has an arbitrary file read vulnerability to get creds to login into the system, dumping of an sqllite database to abtain more creds which then further leads you to gaining user access. To gain root access,we exploit a consul service after pivoting the remote machine with a msfconsole exploit.
 
 ### Enumeration...
