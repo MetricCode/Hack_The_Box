@@ -1,4 +1,4 @@
-)# Previse!
+# Previse!
 ## @Author : M3tr1c_r00t
 ![Previse](https://user-images.githubusercontent.com/99975622/218304698-2a469fe6-22c9-4f70-88da-6d6e23ab95ef.png)
 Previse is an easy box where we exploit a vulnerable web server to status modification and command execution to gain our foothold, dump the database to find user creds and get user acess. For root, we do a path hijacking on a script set to run with sudo priviledges and we pwn the box :)
